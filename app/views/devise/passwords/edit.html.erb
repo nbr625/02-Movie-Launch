@@ -1,6 +1,6 @@
-<h2>Change your password</h2>
+<h2 class="form_title">Change your password</h2>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+<%= bootstrap_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }, layout: :horizontal, label_col: "col-sm-0", control_col: "col-sm-4") do |f| %>
   <%= devise_error_messages! %>
   <%= f.hidden_field :reset_password_token %>
 

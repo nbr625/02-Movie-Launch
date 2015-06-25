@@ -21,18 +21,29 @@
 	color: white;
 }
 .navbar_title {
+	font-family: Impact;
 	color: purple;
-	font-size: 30px;
+	font-size: 34px;
+	text-decorator:none;
+	background: linear-gradient(270deg, purple 0%, #4B0082 70%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 .navbar_title:hover {
-	color:yellow;
+	color:red;
+	text-decoration: none;
 }
+
 .navbar_element {
 	font-size: 19px;
 }
 
 body {
-	background: purple;
+	background-image:
+	linear-gradient(
+		to right,
+		#4B0082, purple
+		);
 }
 
 .review_title {
@@ -45,7 +56,36 @@ body {
 		padding-bottom: 8px;
 	}
 }
+.carousel-caption {
+	font-family: Baskerville;
+	font-size: 15px;
 
-label.required:after {
-	content:" *";
+}
+.movie-title {
+	color: white;
+}
+
+
+#menu > li.sub ul {
+list-style: none;
+position: absolute;
+top: -1000em;
+left: 0px;
+}
+
+
+#menu li.sub ul li a {
+display: inline;
+}
+
+#menu > li.sub:hover ul {
+top: 3em;
+}
+
+#menu{
+text-align:left;
+}
+
+li{
+display:inline-block;
 }

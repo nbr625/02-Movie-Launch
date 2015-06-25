@@ -1,4 +1,4 @@
-<%= bootstrap_form_for([@movie, @review]) do |f| %>
+<%= bootstrap_form_for([@movie, @review], layout: :horizontal, label_col: "col-sm-0", control_col: "col-sm-4") do |f| %>
   <% if @review.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
