@@ -27,6 +27,7 @@ gem 'devise', '~> 3.5.1'
 # Upload Management for ActiveRecord
 gem 'paperclip', '~> 4.3.0'
 gem 'bootstrap-sass', '~> 3.3.5'
+gem 'bootstrap_form', '~> 2.3.0'
 gem 'searchkick', '~> 0.8.7'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

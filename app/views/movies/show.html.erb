@@ -30,7 +30,7 @@
               </tr>
             </tbody>
           </table>
-          <%= link_to "Write a Review", new_movie_review_path(@movie) %>
+          <%= link_to "Write a Review", new_movie_review_path(@movie), class: "btn btn-primary" %>
         </div>
       </div>
       <div class="col-md-7 col-md-offset-1">
@@ -38,8 +38,7 @@
         <p><%= @movie.description %></p>
 
         <% if @reviews.blank? %>
-          <h3>No reviews just yet, would you like to add the first!</h3>
-          <%= link_to "Write Review", new_movie_review_path(@movie), class: "btn btn-danger" %>
+          <h3>No reviews just yet, would you like to add the first?</h3>
         <% else %>
           <% @reviews.each do |review| %>
             <div class="reviews">

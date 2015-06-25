@@ -17,8 +17,22 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.form_title {
+	color: white;
+}
+.navbar_title {
+	color: purple;
+	font-size: 30px;
+}
+.navbar_title:hover {
+	color:yellow;
+}
+.navbar_element {
+	font-size: 19px;
+}
+
 body {
-	background: #AA4847;
+	background: purple;
 }
 
 .review_title {
@@ -30,4 +44,8 @@ body {
 	.star-rating {
 		padding-bottom: 8px;
 	}
+}
+
+label.required:after {
+	content:" *";
 }
