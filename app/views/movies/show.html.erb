@@ -13,10 +13,6 @@
                 <td><%= @movie.title %></td>
               </tr>
               <tr>
-                <td><strong>Description:</strong></td>
-                <td><%= @movie.description %></td>
-              </tr>
-              <tr>
                 <td><strong>Movie length:</strong></td>
                 <td><%= @movie.movie_length %></td>
               </tr>
@@ -24,26 +20,30 @@
                 <td><strong>Director:</strong></td>
                 <td><%= @movie.director %></td>
               </tr>
-              <tr>
-                <td><strong>Rating:</strong></td>
-                <td><%= @movie.rating %></td>
-              </tr>
             </tbody>
           </table>
           <%= link_to "Write a Review", new_movie_review_path(@movie), class: "btn btn-primary" %>
         </div>
       </div>
       <div class="col-md-7 col-md-offset-1">
-        <h1 class="review_title"><%= @movie.title %></h1>
+        <h1 class="review_title purple"><%= @movie.title %></h1>
         <p><%= @movie.description %></p>
 
         <% if @reviews.blank? %>
           <h3>No reviews just yet, would you like to add the first?</h3>
         <% else %>
-          <% @reviews.each do |review| %>
-            <div class="reviews">
-              <div class="star-rating" data-score= <%= review.rating %> ></div>
-              <p><%= review.comment %></p>
+          <% @reviews.sort_by{|t| - t.created_at.to_i}.first(8).each do |review| %>
+            <% @user = User.find(review.user_id)%>
+            <div class="row">
+              <div class="review_avatar"><%= image_tag @user.avatar.url(:thumb)%></div>
+              <div class="reviews review_rating">
+                <div class="star-rating" data-score= <%= review.rating %> ></div>
+                <p><%= review.comment %></p>
+              </div>
+              <% if current_user.id == @user.id %>
+                <div class="review_button"><%= link_to "Change", edit_polymorphic_path([@movie ,review]), class: "btn btn-default" %></div>
+                <div class="review_button"><%= link_to 'Erase It', [@movie, review], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></div>
+              <% end %>
             </div>
           <% end %>
         <% end %>
@@ -51,10 +51,6 @@
     </div>
   </div>
 </div>
-
-
-<%= link_to 'Edit', edit_movie_path(@movie) %> |
-<%= link_to 'Back', movies_path %>
 
 <script>
   $('.star-rating').raty({

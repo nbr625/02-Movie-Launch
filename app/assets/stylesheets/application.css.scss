@@ -89,3 +89,25 @@ text-align:left;
 li{
 display:inline-block;
 }
+
+.review_avatar {
+	width: 20%; 
+	height: 50%; 
+	float:left;
+}
+.review_rating {
+	width: 60%; 
+	height: 50%; 
+	float:left;
+}
+
+.review_button {
+	width: 20%; 
+	height: 80%; 
+	float:left; 
+}
+.purple {
+	color: purple;
+	font-family: Baskerville;
+}
+
