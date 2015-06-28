@@ -23,8 +23,9 @@
   <div class="field">
     <%= f.text_field :director, hide_label: true, placeholder: "Director" %>
   </div>
-  <div class="form_title">Set a Movie Poster</div>
-  <div class="field">
+  <%= f.select(:genre, ['Comedy', 'Romance', 'Action', 'Animated'], hide_label: true,include_blank: "Choose a genre") %>
+  <%= f.select(:new_release, [['Yes!', true], ['No', false]], hide_label: true,include_blank: "New Release?") %>
+  <div>
     <%= f.file_field :image, hide_label: true, class: "btn btn-default"%>
   </div>
   <div class="actions">

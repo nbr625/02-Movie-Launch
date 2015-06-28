@@ -12,6 +12,9 @@ class MoviesController < ApplicationController
 
   def index
     @movies = Movie.all
+    @new_releases = @movies.where(new_release: true)
+    @romance_movies = @movies.where(genre: "Romance")
+    @action_movies = @movies.where(genre: "Action")
   end
  
   def show
@@ -75,6 +78,6 @@ class MoviesController < ApplicationController
     end
 
     def movie_params
-      params.require(:movie).permit(:title, :description, :movie_length, :director, :rating, :image)
+      params.require(:movie).permit(:title, :description, :movie_length, :director, :rating, :image, :new_release, :genre)
     end
 end
