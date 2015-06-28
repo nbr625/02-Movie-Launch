@@ -10,11 +10,33 @@ class MoviesController < ApplicationController
     end
   end
 
+
   def index
     @movies = Movie.all
     @new_releases = @movies.where(new_release: true)
     @romance_movies = @movies.where(genre: "Romance")
     @action_movies = @movies.where(genre: "Action")
+    @animated_movies = @movies.where(genre: "Animated")
+  end
+
+  def new_release
+    @movies = Movies.all
+    @new_releases = @movies.where(new_release: true)
+  end
+
+  def romance
+    @movies = Movies.all
+    @romance_movies = @movies.where(genre: "Romance")
+  end
+
+  def action
+    @movies = Movies.all
+    @action_movies = @movies.where(genre: "Action")
+  end
+
+  def animated
+    @movies = Movies.all
+    @animated_movies = @movies.where(genre: "Animated")
   end
  
   def show
@@ -33,6 +55,7 @@ class MoviesController < ApplicationController
   
   def edit
   end
+
 
   def create
     @movie = current_user.movies.build(movie_params)
