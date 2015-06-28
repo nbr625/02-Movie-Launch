@@ -8,10 +8,11 @@
   <%= render 'carousel' %>
 <% end %>
 <br/>
-<h1 class="form_title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New Releases</h1>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "New Releases", "/new_releases", class: "index_urls"%>
 <ul id="menu">
   <li class="sub">
-    <%@new_releases.sort_by{|t| - t.created_at.to_i}.first(8).each do |movie|%>
+    <%@new_releases.sort_by{|t| - t.created_at.to_i}.first(4).each do |movie|%>
       <div class="col-sm-6 col-md-3">
         <div class="thumbnail">
           <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
@@ -20,7 +21,7 @@
     <% end %>
   </li>
 </ul>
-<h1 class="form_title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action</h1>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "Action", "/action", class: "index_urls"%>
 <ul id="menu">
   <li class="sub">
     <%@action_movies.sort_by{|t| - t.created_at.to_i}.first(4).each do |movie|%>
@@ -32,10 +33,24 @@
     <% end %>
   </li>
 </ul>
-<h1 class="form_title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Romance</h1>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "Romance", "/romance", class: "index_urls"%>
 <ul id="menu">
   <li class="sub">
     <%@romance_movies.sort_by{|t| - t.created_at.to_i}.first(4).each do |movie|%>
+      <div class="col-sm-6 col-md-3">
+        <div class="thumbnail">
+          <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
+        </div>
+      </div>
+    <% end %>
+  </li>
+</ul>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "Animated", "/animated", class: "index_urls"%>
+<ul id="menu">
+  <li class="sub">
+    <%@animated_movies.sort_by{|t| - t.created_at.to_i}.first(4).each do |movie|%>
       <div class="col-sm-6 col-md-3">
         <div class="thumbnail">
           <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
