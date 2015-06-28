@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show, :romance, :action, :animated, :new_release]
 
   def search
     if params[:serach].present?
@@ -20,23 +20,19 @@ class MoviesController < ApplicationController
   end
 
   def new_release
-    @movies = Movies.all
-    @new_releases = @movies.where(new_release: true)
+    @new_releases = Movie.where(new_release: true)
   end
 
   def romance
-    @movies = Movies.all
-    @romance_movies = @movies.where(genre: "Romance")
+    @romance_movies = Movie.where(genre: "Romance")
   end
 
   def action
-    @movies = Movies.all
-    @action_movies = @movies.where(genre: "Action")
+    @action_movies = Movie.where(genre: "Action")
   end
 
   def animated
-    @movies = Movies.all
-    @animated_movies = @movies.where(genre: "Animated")
+    @animated_movies = Movie.where(genre: "Animated")
   end
  
   def show

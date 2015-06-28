@@ -2,6 +2,11 @@ Rails.application.routes.draw do
   
   devise_for :users
   
+  get '/action', to: 'movies#action'
+  get '/animated', to: 'movies#animated'
+  get '/romance', to: 'movies#romance'
+  get '/new_releases', to: 'movies#new_release'
+
   resources :movies do
     collection do
       get 'search'

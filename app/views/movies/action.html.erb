@@ -1,0 +1,19 @@
+<% if !user_signed_in? %>
+  <div class="jumbotron">
+    <h1>The Latest Releases Reviewed</h1>
+    <p>Find out what the people are saying about the latest film and become part of the mob.</p>
+    <p><%= link_to "Sign up to write a Review", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+  </div>
+<% end %>
+h1 class="form_title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action</h1>
+<ul id="menu">
+  <li class="sub">
+    <%@action_movies.each do |movie|%>
+      <div class="col-sm-6 col-md-3">
+        <div class="thumbnail">
+          <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
+        </div>
+      </div>
+    <% end %>
+  </li>
+</ul>
