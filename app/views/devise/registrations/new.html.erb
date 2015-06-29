@@ -8,6 +8,10 @@
   </div>
 
   <div class="field">
+    <%= f.text_field :favorite_movie, hide_label: true, placeholder: "What is your favorite movie?" %>
+  </div>
+
+  <div class="field">
     <% if @minimum_password_length %>
     <em class="form_title">(<%= @minimum_password_length %> characters minimum)</em>
     <% end %>
@@ -16,6 +20,14 @@
 
   <div class="field">
     <%= f.password_field :password_confirmation, autocomplete: "off", hide_label: true, placeholder: "Password Confirmation" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_area :biography, hide_label: true, placeholder: "Tell Us about yourself" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :favorite_movie, hide_label: true, placeholder: "What is your favorite movie?" %>
   </div>
 
   <div class="field">

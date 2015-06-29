@@ -7,6 +7,10 @@
     <%= f.email_field :email, hide_label: true, placeholder: "Email", autofocus: true %>
   </div>
 
+  <div class="field">
+    <%= f.text_field :favorite_movie, hide_label: true, placeholder: "What is your favorite movie?" %>
+  </div>
+
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
@@ -21,6 +25,14 @@
 
   <div class="field">
     <%= f.password_field :current_password,  hide_label: true, placeholder: "Current Password", autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_area :biography, hide_label: true, placeholder: "Tell Us about yourself" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :favorite_movie, hide_label: true, placeholder: "What is your favorite movie?" %>
   </div>
 
   <div class="field">

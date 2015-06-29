@@ -1,0 +1,11 @@
+<ul>
+	<h1 class="form_title"><%= @user.username%></h2><br/>
+	<li><%= image_tag @user.avatar.url(:medium) %></li><br/><br/>
+	<h2 class="form_title">Biography</h2><br/>
+	<li class="form_title"><%= @user.biography%></li><br/><br/>
+	<h2 class="form_title">Favorite Flick</h2><br/>
+	<li class="form_title"><%= @user.favorite_movie %></li><br/><br/>
+
+	<li><%= link_to "Settings", edit_user_registration_path %></li><br/>
+	<li><%= link_to "Logout", destroy_user_session_path, method: "delete" %></li>
+</ul>

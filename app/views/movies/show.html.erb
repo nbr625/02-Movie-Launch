@@ -36,7 +36,7 @@
           <% @reviews.sort_by{|t| - t.created_at.to_i}.first(8).each do |review| %>
             <% @user = User.find(review.user_id)%>
             <div class="row">
-              <div class="review_avatar"><%= image_tag @user.avatar.url(:thumb)%></div>
+              <div class="review_avatar"><%= link_to (image_tag @user.avatar.url(:thumb)), @user %></div>
               <div class="reviews review_rating">
                 <div class="star-rating" data-score= <%= review.rating %> ></div>
                 <p><%= review.comment %></p>
