@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
-    resources :reviews, except: [:show, :index]
+    resources :reviews, except: :show
   end
 
   root to: "movies#index"

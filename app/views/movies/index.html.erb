@@ -2,63 +2,67 @@
 
 <% if !user_signed_in? %>
   <div class="jumbotron">
-    <h1>The Latest Releases Reviewed</h1>
-    <p>Find out what the people are saying about the latest film and become part of the mob.</p>
-    <p><%= link_to "Sign up to write a Review", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+    <h1 class="navbar_element">Science Fiction Films</h1>
+    <p>Join the nerds and disguised alien community. Here we are tirelessly collaborating to make a comprehensive archive of films that achieve the union of art and science.</p>
+    <p><%= link_to "I Have Found My People!", new_user_registration_path, class: "btn btn-danger btn-lg" %></p>
   </div>
 <% else%>
   <%= render 'carousel' %>
 <% end %>
 <br/>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "New Releases", "/new_releases", class: "index_urls"%>
-<ul class="slider5" id="menu">
-  <%@new_releases.each do |movie|%>
-    <li class="sub">
-      <div class="thumbnail">
-        <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
-      </div>
-    </li>
-  <% end %>
-</ul>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "Action", "/action", class: "index_urls"%>
-<ul class="slider5" id="menu">
-  <%@action_movies.each do |movie|%>
-    <li class="sub">
-      <div class="thumbnail">
-        <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
-      </div>
-    </li>
-  <% end %>
-</ul>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "Romance", "/romance", class: "index_urls"%>
-<ul class="slider5" id="menu">
-  <%@romance_movies.each do |movie|%>
-    <li class="sub">
-      <div class="thumbnail">
-        <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
-      </div>
-    </li>
-  <% end %>
-</ul>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "Animated", "/animated", class: "index_urls"%>
-<ul class="slider5" id="menu">
-  <%@animated_movies.each do |movie|%>
-    <li class="sub">
-      <div class="thumbnail">
-        <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
-      </div>
-    </li>
-  <% end %>
-</ul>
+<div style="text-align:center;">
+  <%= link_to "New Releases", "/new_releases", class: "index_urls"%> 
+  <ul class="slider5" id="menu">
+    <%@new_releases.each do |movie|%>
+      <li class="sub">
+        <div class="thumbnail">
+          <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<div style="text-align:center;">
+  <%= link_to "Action", "/action", class: "index_urls"%>
+  <ul class="slider5" id="menu">
+    <%@action_movies.each do |movie|%>
+      <li class="sub">
+        <div class="thumbnail">
+          <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<div style="text-align:center;">
+  <%= link_to "Romance", "/romance", class: "index_urls"%>
+  <ul class="slider5" id="menu">
+    <%@romance_movies.each do |movie|%>
+      <li class="sub">
+        <div class="thumbnail">
+          <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<div style="text-align:center;">
+  <%= link_to "Animated", "/animated", class: "index_urls"%>
+  <ul class="slider5" id="menu">
+    <%@animated_movies.each do |movie|%>
+      <li class="sub">
+        <div class="thumbnail">
+          <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
 
 <script>
   $('.slider5').bxSlider({
     minSlides: 3,
-    maxSlides: 6,
+    maxSlides: 5,
     slideWidth: 200,
     infiniteLoop: false
   });

@@ -26,9 +26,9 @@
   <%= f.select(:genre, ['Comedy', 'Romance', 'Action', 'Animated'], hide_label: true,include_blank: "Choose a genre") %>
   <%= f.select(:new_release, [['Yes!', true], ['No', false]], hide_label: true,include_blank: "New Release?") %>
   <div>
-    <%= f.file_field :image, hide_label: true, class: "btn btn-default"%>
+    <%= f.file_field :image, hide_label: true, class: "btn btn-default", placeholder: "Select a File"%>
   </div>
   <div class="actions">
-    <%= f.submit "Post Movie", class: "btn btn-primary" %>
+    <%= f.submit "Post Movie", class: "btn btn-default"  %>
   </div>
 <% end %>

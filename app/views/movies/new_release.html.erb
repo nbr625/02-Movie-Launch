@@ -5,15 +5,17 @@
     <p><%= link_to "Sign up to write a Review", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
   </div>
 <% end %>
-h1 class="form_title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New Release</h1>
-<ul id="menu">
-  <li class="sub">
-    <%@new_releases.each do |movie|%>
-      <div class="col-sm-6 col-md-3">
-        <div class="thumbnail">
-          <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
+<div style="text-align:center;">
+  <h1 class="form_title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New Release</h1>
+  <ul id="menu">
+    <li class="sub">
+      <%@new_releases.each do |movie|%>
+        <div class="col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
+          </div>
         </div>
-      </div>
-    <% end %>
-  </li>
-</ul>
+      <% end %>
+    </li>
+  </ul>
+</div>

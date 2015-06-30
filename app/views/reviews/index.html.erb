@@ -1,29 +1,38 @@
-<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-7 col-md-offset-1">
+        <h1 class="review_title purple"><%= link_to @movie.title, @movie, class: "index_urls", style: "color: purple;" %></h1>
+        <% if @reviews.blank? %>
+          <h3>No reviews just yet, would you like to add the first?</h3>
+        <% else %>
+          <% @reviews.sort_by{|t| - t.created_at.to_i}.first(8).each do |review| %>
+            <% @user = User.find(review.user_id)%>
+            <div class="row">
+              <div class="review_avatar"><%= link_to (image_tag @user.avatar.url(:thumb)), @user %></div>
+              <div class="reviews review_rating">
+                <div class="star-rating" data-score= <%= review.rating %> ></div>
+                <p><%= review.comment %></p>
+              </div>
+              <% if current_user.id == @user.id %>
+                <div class="review_button"><%= link_to "Change", edit_polymorphic_path([@movie ,review]), class: "btn btn-default" %></div>
+                <div class="review_button"><%= link_to 'Erase It', [@movie, review], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></div>
+              <% end %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 
-<h1>Listing Reviews</h1>
+<script>
+  $('.star-rating').raty({
+    path: '/assets/',
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    }
 
-<table>
-  <thead>
-    <tr>
-      <th>Rating</th>
-      <th>Comment</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @reviews.each do |review| %>
-      <tr>
-        <td><%= review.rating %></td>
-        <td><%= review.comment %></td>
-        <td><%= link_to 'Show', review %></td>
-        <td><%= link_to 'Edit', edit_review_path(review) %></td>
-        <td><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Review', new_review_path %>
+  });
+</script>

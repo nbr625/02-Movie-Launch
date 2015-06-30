@@ -22,13 +22,15 @@
               </tr>
             </tbody>
           </table>
-          <%= link_to "Write a Review", new_movie_review_path(@movie), class: "btn btn-primary" %>
+          <%= link_to "Write a Review", new_movie_review_path(@movie), class: "btn btn-danger" %>
           <%= link_to "Edit Movie", edit_movie_path(@movie), class: "btn btn-default" %>
         </div>
       </div>
       <div class="col-md-7 col-md-offset-1">
         <h1 class="review_title purple"><%= @movie.title %></h1>
         <p><%= @movie.description %></p>
+
+        <%= render "star_image" %> 
 
         <% if @reviews.blank? %>
           <h3>No reviews just yet, would you like to add the first?</h3>
@@ -43,11 +45,14 @@
               </div>
               <% if current_user.id == @user.id %>
                 <div class="review_button"><%= link_to "Change", edit_polymorphic_path([@movie ,review]), class: "btn btn-default" %></div>
-                <div class="review_button"><%= link_to 'Erase It', [@movie, review], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></div>
+                <div class="review_button"><%= link_to 'Erase It', [@movie, review], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-info" %></div>
               <% end %>
             </div>
           <% end %>
         <% end %>
+        <div style="text-align:center;">
+          <%= link_to "All Reviews", movie_reviews_path(@movie), class: "btn btn-default"%>
+        </div>
       </div>
     </div>
   </div>

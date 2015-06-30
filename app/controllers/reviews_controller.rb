@@ -13,6 +13,10 @@ class ReviewsController < ApplicationController
   def edit
   end
 
+  def index
+    @reviews = @movie.reviews
+  end
+
   # POST /reviews
   # POST /reviews.json
   def create

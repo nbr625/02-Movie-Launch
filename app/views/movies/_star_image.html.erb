@@ -1,0 +1,24 @@
+
+<div style="text-align:center;">
+	<% if @reviews.blank?%>
+		<%= image_tag("dim_space.jpg", size: "200x200")%>
+		<div class="star_title">Empty Space</div>
+	<% elsif @avg_review < 1.50 %>
+		<%= image_tag("red_dwarf.jpg", size: "200x200")%>
+		<div class="star_title">Red Dwarf</div>
+
+	<% elsif @avg_review.between?(1.50, 2.49) %>
+		<%= image_tag("small_orange.png", size: "200x200")%>
+		<div class="star_title">Orange Dimmer</div>
+	<% elsif @avg_review.between?(2.50, 3.49) %>
+		<%= image_tag("yellow_star.jpg", size: "200x200")%>
+		<div class="star_title">Yellow Sol</div>
+
+	<% elsif @avg_review.between?(3.50, 4.49) %>
+		<%= image_tag("white_star.jpg", size: "200x200")%>
+		<div class="star_title">White Giant</div>
+	<% else %>
+		<%= image_tag("blue_star.jpg", size: "200x200")%>
+		<div class="star_title">Blue Giant</div>
+	<% end %>
+</div>
