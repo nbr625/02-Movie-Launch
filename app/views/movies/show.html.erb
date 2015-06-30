@@ -43,9 +43,9 @@
                 <div class="star-rating" data-score= <%= review.rating %> ></div>
                 <p><%= review.comment %></p>
               </div>
-              <% if current_user.id == @user.id %>
-                <div class="review_button"><%= link_to "Change", edit_polymorphic_path([@movie ,review]), class: "btn btn-default" %></div>
-                <div class="review_button"><%= link_to 'Erase It', [@movie, review], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-info" %></div>
+              <% if current_user == @user %>
+                <div class="review_button"><%= link_to "Change", edit_polymorphic_path([@movie ,review]), class: "btn btn-info" %></div>
+                <div class="review_button"><%= link_to 'Erase It', [@movie, review], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %></div>
               <% end %>
             </div>
           <% end %>

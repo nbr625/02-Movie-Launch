@@ -7,8 +7,14 @@
     <p><%= link_to "I Have Found My People!", new_user_registration_path, class: "btn btn-danger btn-lg" %></p>
   </div>
 <% else%>
-  <%= render 'carousel' %>
+  <div class="container-fluid">
+   <div class="row">
+    <%= link_to (image_tag 'spacesfr.jpg', class: 'img-responsive'), new_movie_path %>
+   </div>
+</div>
+  </div>
 <% end %>
+
 <br/>
 <div style="text-align:center;">
   <%= link_to "New Releases", "/new_releases", class: "index_urls"%> 

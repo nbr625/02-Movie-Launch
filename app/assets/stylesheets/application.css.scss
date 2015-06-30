@@ -17,6 +17,17 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+* {
+    font-family: ArialRoundedMtBold;
+ }
+
+.masthead {
+   background-image: image-url("space.jpg");
+   height: 295px;
+   background-size: 100%;
+   background-repeat: no-repeat;
+}
+
 .form_title {
 	color: white;
 }
@@ -53,13 +64,14 @@
 
 .index_urls{
 	font-size: 34px;
-	font-family: 'ArialRoundedMtBold';
 	color: white;
 
 }
+
 .index_urls:hover {
-	color:purple;
+	color: white;
 	text-decoration: none;
+	text-shadow: -1px 1px 8px orange, 1px -1px 8px yellow;
 }
 
 .navbar_element {
@@ -85,7 +97,6 @@ body {
 	}
 }
 .carousel-caption {
-	font-family: Baskerville;
 	font-size: 15px;
 
 }
@@ -136,7 +147,6 @@ display:inline-block;
 }
 .purple {
 	color: purple;
-	font-family: Baskerville;
 }
 
 .btn-danger {
@@ -179,6 +189,13 @@ display:inline-block;
 	color: #4B0082;
 	font-weight: bold;
 }
+
+
+
+.img-responsive {
+	position: relative;
+}
+
 /** Slider **/
 
 .bx-wrapper {
@@ -197,6 +214,15 @@ textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
     border-color: orange;
     box-shadow: 0 1px 1px yellow inset, 0 0 8px orange;
     outline: 0 none;
+}
+
+.navbar_li:hover {
+
+	text-shadow: -1px 1px 1px yellow, 1px -1px 1px yellow;
+}
+
+.dropdown-menu li:hover {
+	text-shadow: -1px 1px 1px yellow, 1px -1px 1px yellow;
 }
 
 /** THEME
@@ -223,6 +249,13 @@ textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
 	position: absolute;
 	bottom: -30px;
 	width: 100%;
+}
+
+.container-fluid h2 { 
+   position: absolute; 
+   top: 200px; 
+   left: 0; 
+   width: 100%; 
 }
 
 /* LOADER */
