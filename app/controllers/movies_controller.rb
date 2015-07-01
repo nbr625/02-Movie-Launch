@@ -13,7 +13,7 @@ class MoviesController < ApplicationController
 
   def index
     @movies = Movie.all
-    @new_releases = @movies.where(new_release: true)
+    @new_releases = @movies.where(year: Time.now.year)
     @romance_movies = @movies.where(genre: "Romance")
     @action_movies = @movies.where(genre: "Action")
     @animated_movies = @movies.where(genre: "Animated")
@@ -21,7 +21,7 @@ class MoviesController < ApplicationController
   end
 
   def new_release
-    @new_releases = Movie.where(new_release: true)
+    @new_releases = Movie.where(year: Time.now.year)
   end
 
   def romance
