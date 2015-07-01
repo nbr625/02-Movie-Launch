@@ -12,7 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= f.text_field :title, hide_label: true, placeholder: "Title" %>
+    <%= f.text_field :title, hide_label: true, placeholder: "Title"%>
+  </div>
+  <div class="filed">
+    <%= f.number_field :year, hide_label: true, placeholder: "Year of release"%>
   </div>
   <div class="field">
     <%= f.text_area :description, hide_label: true, placeholder: "Description" %>
@@ -23,8 +26,8 @@
   <div class="field">
     <%= f.text_field :director, hide_label: true, placeholder: "Director" %>
   </div>
-  <%= f.select(:genre, ['Comedy', 'Romance', 'Action', 'Animated'], hide_label: true,include_blank: "Choose a genre") %>
-  <%= f.select(:new_release, [['Yes!', true], ['No', false]], hide_label: true,include_blank: "New Release?") %>
+  <%= f.select(:genre, ['Comedy', 'Romance', 'Action', 'Animated'], hide_label: true,include_blank: "Genre") %>
+  <%= f.select(:genre, ['G', 'PG', 'PG13', 'R'], hide_label: true,include_blank: "MPAA Rating") %>
   <div>
     <%= f.file_field :image, hide_label: true, class: "btn btn-default", placeholder: "Select a File"%>
   </div>
