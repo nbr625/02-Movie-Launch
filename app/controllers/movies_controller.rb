@@ -17,6 +17,7 @@ class MoviesController < ApplicationController
     @romance_movies = @movies.where(genre: "Romance")
     @action_movies = @movies.where(genre: "Action")
     @animated_movies = @movies.where(genre: "Animated")
+    @comedy_movies = @movies.where(genre: "Comedy")
   end
 
   def new_release
@@ -33,6 +34,9 @@ class MoviesController < ApplicationController
 
   def animated
     @animated_movies = Movie.where(genre: "Animated")
+  end
+  def comedy
+    @comedy_movies = Movie.where(genre: "Comedy")
   end
  
   def show

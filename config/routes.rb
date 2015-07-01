@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/action', to: 'movies#action'
   get '/animated', to: 'movies#animated'
   get '/romance', to: 'movies#romance'
+  get '/comedy', to: 'movies#comedy'
   get '/new_releases', to: 'movies#new_release'
 
   resources :movies do

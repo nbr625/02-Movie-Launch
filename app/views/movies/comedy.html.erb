@@ -6,10 +6,10 @@
   </div>
 <% end %>
 <div style="text-align:center;">
-  <h1 class="form_title" style="text-align:center;">New Release</h1>
+  <h1 class="form_title" style="text-align:center;">Comedy</h1>
   <ul id="menu">
     <li class="sub">
-      <%@new_releases.each do |movie|%>
+      <%@comedy_movies.each do |movie|%>
         <div class="col-sm-6 col-md-3">
           <div class="thumbnail">
             <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
