@@ -21,23 +21,23 @@ class MoviesController < ApplicationController
   end
 
   def new_release
-    Movie.new_releases
+    @new_releases = Movie.new_releases
   end
 
   def romance
-    Movie.romance_movies
+    @romance_movies = Movie.romance_movies
   end
 
   def action
-    Movie.action_movies
+    @action_movies = Movie.action_movies
   end
 
   def animated
-    Movie.animated_movies
+    @animated_moves = Movie.animated_movies
   end
 
   def comedy
-    Movie.comedy_movies
+    @comedy_movies = Movie.comedy_movies
   end
  
   def show
