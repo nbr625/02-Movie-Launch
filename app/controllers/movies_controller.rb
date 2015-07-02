@@ -35,6 +35,7 @@ class MoviesController < ApplicationController
   def animated
     @animated_movies = Movie.where(genre: "Animated")
   end
+  
   def comedy
     @comedy_movies = Movie.where(genre: "Comedy")
   end

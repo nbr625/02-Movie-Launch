@@ -27,7 +27,7 @@
     <%= f.text_field :director, hide_label: true, placeholder: "Director" %>
   </div>
   <%= f.select(:genre, ["Comedy", "Romance", "Action", "Animated"], hide_label: true,include_blank: "Genre") %>
-  <%= f.select(:genre, ['G', 'PG', 'PG13', 'R'], hide_label: true,include_blank: "MPAA Rating") %>
+  <%= f.select(:grade, ['G', 'PG', 'PG13', 'R'], hide_label: true,include_blank: "MPAA Rating") %>
   <div>
     <%= f.file_field :image, hide_label: true, class: "btn btn-default", placeholder: "Select a File"%>
   </div>
