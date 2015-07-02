@@ -35,10 +35,10 @@
 
 .navbar_title {
 	font-family: 'impact';
-	color: #13b569;
+	color: #6AA233;
 	font-size: 34px;
 	text-decorator:none;
-	background: linear-gradient(270deg, #13b569 0%, #094f2e 70%);
+	background: linear-gradient(270deg, #6AA233 0%, #188945 70%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -49,10 +49,10 @@
 
 .star_title {
 	font-family: 'impact';
-	color: #13b569;
+	color: #6AA233;
 	font-size: 25px;
 	text-decorator:none;
-	background: linear-gradient(180deg, #13b569 0%, #094f2e 70%);
+	background: linear-gradient(180deg, #6AA233 0%, #188945 70%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -79,11 +79,7 @@
 }
 
 body {
-	background-image:
-	linear-gradient(
-		to right,
-		#094f2e, #13b569
-		);
+	background-image: url('nebula_bg.jpg')
 }
 
 .review_title {
@@ -146,47 +142,47 @@ display:inline-block;
 	float:left; 
 }
 .purple {
-	color: #13b569;
+	color: #188945;
 }
 
 .btn-danger {
-  	border-color: #094f2e;
-  	background-color: linear-gradient(270deg, #094f2e 0%, #13b569 70%);
-  	background: linear-gradient(270deg, #13b569 0%, #094f2e 70%);
+  	border-color: #188945;
+  	background-color: linear-gradient(270deg, #188945 0%, #6AA233 70%);
+  	background: linear-gradient(270deg, #6AA233 0%, #188945 20%);
 
 }
 .btn-danger:hover { 
-	border-color: #094f2e;
-	background-color: #13b569;
-	background: linear-gradient(270deg, #13b569 0%, #094f2e 70%);
+	border-color: #188945;
+	background-color: #6AA233;
+	
+
 	
 }
 .btn-warning {
-	border-color: #094f2e;
-	ackground-color: #13b569;
-	background: linear-gradient(220deg, #094f2e 0%, #13b569 70%);
+	border-color: #188945;
+	background-color: #6AA233;
+	background: linear-gradient(220deg, #188945 0%, #6AA233 80%);
 }
 
 .btn-warning:hover {
-	border-color: #094f2e;
-	ackground-color: #13b569;
-	background: linear-gradient(220deg, #094f2e 0%, #13b569 70%);
+	border-color: #188945;
+	background-color: #6AA233;
 }
 
 .btn-info {
-	border-color: #094f2e;
-	ackground-color: #13b569;
-	background: linear-gradient(320deg, #094f2e 0%, #13b569 70%);
+	border-color: #188945;
+	background-color: #6AA233;
+	background: linear-gradient(320deg, #188945 0%, #6AA233 20%);
 }
 
 .btn-info:hover {
-	border-color: #094f2e;
-	ackground-color: #13b569;
-	background: linear-gradient(320deg, #094f2e 0%, #13b569 70%);
+	border-color: #188945;
+	background-color: #6AA233;
+	background: linear-gradient(320deg, #188945 0%, #6AA233 20%);
 }
 
 .btn-default {
-	color: #094f2e;
+	color: #188945;
 	font-weight: bold;
 }
 
@@ -194,6 +190,7 @@ display:inline-block;
 
 .img-responsive {
 	position: relative;
+
 }
 
 /** Slider **/

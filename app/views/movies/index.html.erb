@@ -6,12 +6,7 @@
     <p><%= link_to "I Have Found My People!", new_user_registration_path, class: "btn btn-danger btn-lg" %></p>
   </div>
 <% else%>
-  <div class="container-fluid">
-   <div class="row">
-    <%= link_to (image_tag 'spacesfr.jpg', class: 'img-responsive'), new_movie_path %>
-   </div>
-</div>
-  </div>
+<%= render 'carousel'%>
 <% end %>
 
 <br/>
@@ -75,7 +70,10 @@
     <% end %>
   </ul>
 </div>
+<div id="frontCarousel" class="carousel slide" data-ride="carousel">
 
+  <!-- Wrapper for slides -->
+</div>
 
 <script>
   $('.slider5').bxSlider({
