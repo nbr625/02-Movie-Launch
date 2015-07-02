@@ -17,6 +17,10 @@
   <div class="field">
     <%= f.password_field :password_confirmation, autocomplete: "off", hide_label: true, placeholder: "Password Confirmation" %>
   </div>
+  
+  <div class="field">
+    <%= f.text_field :username, hide_label: true, placeholder: "Username" %>
+  </div>
 
   <div class="field">
     <%= f.text_area :biography, hide_label: true, placeholder: "Tell Us about yourself" %>
