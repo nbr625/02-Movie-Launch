@@ -13,31 +13,31 @@ class MoviesController < ApplicationController
 
   def index
     @movies = Movie.all
-    @new_releases = @movies.where(year: Time.now.year)
-    @romance_movies = @movies.where(genre: "Romance")
-    @action_movies = @movies.where(genre: "Action")
-    @animated_movies = @movies.where(genre: "Animated")
-    @comedy_movies = @movies.where(genre: "Comedy")
+    @new_releases = Movie.new_releases
+    @romance_movies = Movie.romance_movies
+    @action_movies = Movie.action_movies
+    @animated_movies = Movie.animated_movies
+    @comedy_movies = Movie.comedy_movies
   end
 
   def new_release
-    @new_releases = Movie.where(year: Time.now.year)
+    Movie.new_releases
   end
 
   def romance
-    @romance_movies = Movie.where(genre: "Romance")
+    Movie.romance_movies
   end
 
   def action
-    @action_movies = Movie.where(genre: "Action")
+    Movie.action_movies
   end
 
   def animated
-    @animated_movies = Movie.where(genre: "Animated")
+    Movie.animated_movies
   end
 
   def comedy
-    @comedy_movies = Movie.where(genre: "Comedy")
+    Movie.comedy_movies
   end
  
   def show

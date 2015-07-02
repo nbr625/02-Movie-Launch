@@ -35,10 +35,10 @@
 
 .navbar_title {
 	font-family: 'impact';
-	color: purple;
+	color: #db3106;
 	font-size: 34px;
 	text-decorator:none;
-	background: linear-gradient(270deg, purple 0%, #4B0082 70%);
+	background: linear-gradient(270deg, #db3106 0%, #a81025 70%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -49,10 +49,10 @@
 
 .star_title {
 	font-family: 'impact';
-	color: purple;
+	color: #db3106;
 	font-size: 25px;
 	text-decorator:none;
-	background: linear-gradient(180deg, purple 0%, #4B0082 70%);
+	background: linear-gradient(180deg, #db3106 0%, #a81025 70%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -82,7 +82,7 @@ body {
 	background-image:
 	linear-gradient(
 		to right,
-		#4B0082, purple
+		#a81025, #db3106
 		);
 }
 
@@ -146,47 +146,47 @@ display:inline-block;
 	float:left; 
 }
 .purple {
-	color: purple;
+	color: #db3106;
 }
 
 .btn-danger {
-  	border-color: #4B0082;
-  	background-color: linear-gradient(270deg, #4B0082 0%, purple 70%);
-  	background: linear-gradient(270deg, purple 0%, #4B0082 70%);
+  	border-color: #a81025;
+  	background-color: linear-gradient(270deg, #a81025 0%, #db3106 70%);
+  	background: linear-gradient(270deg, #db3106 0%, #a81025 70%);
 
 }
 .btn-danger:hover { 
-	border-color: #4B0082;
-	background-color: purple;
-	background: linear-gradient(270deg, purple 0%, #4B0082 70%);
+	border-color: #a81025;
+	background-color: #db3106;
+	background: linear-gradient(270deg, #db3106 0%, #a81025 70%);
 	
 }
 .btn-warning {
-	border-color: #4B0082;
-	ackground-color: purple;
-	background: linear-gradient(220deg, #4B0082 0%, purple 70%);
+	border-color: #a81025;
+	ackground-color: #db3106;
+	background: linear-gradient(220deg, #a81025 0%, #db3106 70%);
 }
 
 .btn-warning:hover {
-	border-color: #4B0082;
-	ackground-color: purple;
-	background: linear-gradient(220deg, #4B0082 0%, purple 70%);
+	border-color: #a81025;
+	ackground-color: #db3106;
+	background: linear-gradient(220deg, #a81025 0%, #db3106 70%);
 }
 
 .btn-info {
-	border-color: #4B0082;
-	ackground-color: purple;
-	background: linear-gradient(320deg, #4B0082 0%, purple 70%);
+	border-color: #a81025;
+	ackground-color: #db3106;
+	background: linear-gradient(320deg, #a81025 0%, #db3106 70%);
 }
 
 .btn-info:hover {
-	border-color: #4B0082;
-	ackground-color: purple;
-	background: linear-gradient(320deg, #4B0082 0%, purple 70%);
+	border-color: #a81025;
+	ackground-color: #db3106;
+	background: linear-gradient(320deg, #a81025 0%, #db3106 70%);
 }
 
 .btn-default {
-	color: #4B0082;
+	color: #a81025;
 	font-weight: bold;
 }
 
