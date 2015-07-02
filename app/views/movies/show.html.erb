@@ -58,6 +58,13 @@
   </div>
 </div>
 
+<% if @movie.genre == "Romance" %>
+  <%= render 'romance_slider' %>
+<% elsif @movie.genre == "Action" %>
+  <%= render 'action_slider' %>
+<% elsif @movie.genre == "Animated" %>
+  <%= render 'animated_slider' %>
+<% end %>
 
 <script>
   $('.star-rating').raty({
@@ -68,4 +75,12 @@
     }
 
   });
+
+  $('.slider5').bxSlider({
+    minSlides: 3,
+    maxSlides: 6,
+    slideWidth: 200,
+    infiniteLoop: false
+  });
+
 </script>

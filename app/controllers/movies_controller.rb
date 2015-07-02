@@ -1,5 +1,6 @@
 class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
+  before_action :set_genre_collections, only: [:index, :show]
   before_action :authenticate_user!, except: [:index, :show, :romance, :action, :animated, :new_release]
 
   def search
@@ -14,10 +15,6 @@ class MoviesController < ApplicationController
   def index
     @movies = Movie.all
     @new_releases = Movie.new_releases
-    @romance_movies = Movie.romance_movies
-    @action_movies = Movie.action_movies
-    @animated_movies = Movie.animated_movies
-    @comedy_movies = Movie.comedy_movies
   end
 
   def new_release
@@ -34,10 +31,6 @@ class MoviesController < ApplicationController
 
   def animated
     @animated_moves = Movie.animated_movies
-  end
-
-  def comedy
-    @comedy_movies = Movie.comedy_movies
   end
  
   def show
@@ -100,6 +93,13 @@ class MoviesController < ApplicationController
     def set_movie
       @movie = Movie.find(params[:id])
     end
+
+    def set_genre_collections
+      @romance_movies = Movie.romance_movies
+      @action_movies = Movie.action_movies
+      @animated_movies = Movie.animated_movies
+    end
+  
 
     def movie_params
       params.require(:movie).permit(:title, :description, :movie_length, :director, :rating, :image, :new_release, :genre, :grade, :year)

@@ -1,0 +1,12 @@
+<div style="text-align:center;">
+  <%= link_to "Romance", "/romance", class: "index_urls"%>
+  <ul class="slider5" id="menu">
+    <%@romance_movies.each do |movie|%>
+      <li class="sub">
+        <div class="thumbnail">
+          <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>

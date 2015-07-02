@@ -8,5 +8,4 @@ class Movie < ActiveRecord::Base
   	scope :romance_movies, -> { where(genre: "Romance")}
   	scope :action_movies, -> { where(genre: "Action")}
   	scope :animated_movies, -> { where(genre: "Animated")}
-  	scope :comedy_movies, -> { where(genre: "Comedy")}
 end

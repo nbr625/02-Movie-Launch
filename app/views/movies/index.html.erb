@@ -22,54 +22,13 @@
     <% end %>
   </ul>
 </div>
-<div style="text-align:center;">
-  <%= link_to "Action", "/action", class: "index_urls"%>
-  <ul class="slider5" id="menu">
-    <%@action_movies.each do |movie|%>
-      <li class="sub">
-        <div class="thumbnail">
-          <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
-        </div>
-      </li>
-    <% end %>
-  </ul>
-</div>
-<div style="text-align:center;">
-  <%= link_to "Romance", "/romance", class: "index_urls"%>
-  <ul class="slider5" id="menu">
-    <%@romance_movies.each do |movie|%>
-      <li class="sub">
-        <div class="thumbnail">
-          <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
-        </div>
-      </li>
-    <% end %>
-  </ul>
-</div>
-<div style="text-align:center;">
-  <%= link_to "Comedy", "/comedy", class: "index_urls"%>
-  <ul class="slider5" id="menu">
-    <%@comedy_movies.each do |movie|%>
-      <li class="sub">
-        <div class="thumbnail">
-          <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
-        </div>
-      </li>
-    <% end %>
-  </ul>
-</div>
-<div style="text-align:center;">
-  <%= link_to "Animated", "/animated", class: "index_urls"%>
-  <ul class="slider5" id="menu">
-    <%@animated_movies.each do |movie|%>
-      <li class="sub">
-        <div class="thumbnail">
-          <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
-        </div>
-      </li>
-    <% end %>
-  </ul>
-</div>
+
+<%= render 'action_slider' %>
+
+<%= render 'romance_slider' %>
+
+<%= render 'animated_slider'%>
+
 <div id="frontCarousel" class="carousel slide" data-ride="carousel">
 
   <!-- Wrapper for slides -->
@@ -80,6 +39,6 @@
     minSlides: 3,
     maxSlides: 6,
     slideWidth: 200,
-    infiniteLoop: false
+    infiniteLoop: true
   });
 </script>
