@@ -3,7 +3,7 @@ class MoviesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show, :romance, :action, :animated, :new_release]
 
   def search
-    if params[:serach].present?
+    if params[:search].present?
       @movies = Movie.search(params[:search])
     else
       @movies = Movie.all
@@ -35,7 +35,7 @@ class MoviesController < ApplicationController
   def animated
     @animated_movies = Movie.where(genre: "Animated")
   end
-  
+
   def comedy
     @comedy_movies = Movie.where(genre: "Comedy")
   end
