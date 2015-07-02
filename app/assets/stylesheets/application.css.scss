@@ -35,10 +35,10 @@
 
 .navbar_title {
 	font-family: 'impact';
-	color: #db3106;
+	color: #13b569;
 	font-size: 34px;
 	text-decorator:none;
-	background: linear-gradient(270deg, #db3106 0%, #a81025 70%);
+	background: linear-gradient(270deg, #13b569 0%, #094f2e 70%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -49,10 +49,10 @@
 
 .star_title {
 	font-family: 'impact';
-	color: #db3106;
+	color: #13b569;
 	font-size: 25px;
 	text-decorator:none;
-	background: linear-gradient(180deg, #db3106 0%, #a81025 70%);
+	background: linear-gradient(180deg, #13b569 0%, #094f2e 70%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -82,7 +82,7 @@ body {
 	background-image:
 	linear-gradient(
 		to right,
-		#a81025, #db3106
+		#094f2e, #13b569
 		);
 }
 
@@ -146,47 +146,47 @@ display:inline-block;
 	float:left; 
 }
 .purple {
-	color: #db3106;
+	color: #13b569;
 }
 
 .btn-danger {
-  	border-color: #a81025;
-  	background-color: linear-gradient(270deg, #a81025 0%, #db3106 70%);
-  	background: linear-gradient(270deg, #db3106 0%, #a81025 70%);
+  	border-color: #094f2e;
+  	background-color: linear-gradient(270deg, #094f2e 0%, #13b569 70%);
+  	background: linear-gradient(270deg, #13b569 0%, #094f2e 70%);
 
 }
 .btn-danger:hover { 
-	border-color: #a81025;
-	background-color: #db3106;
-	background: linear-gradient(270deg, #db3106 0%, #a81025 70%);
+	border-color: #094f2e;
+	background-color: #13b569;
+	background: linear-gradient(270deg, #13b569 0%, #094f2e 70%);
 	
 }
 .btn-warning {
-	border-color: #a81025;
-	ackground-color: #db3106;
-	background: linear-gradient(220deg, #a81025 0%, #db3106 70%);
+	border-color: #094f2e;
+	ackground-color: #13b569;
+	background: linear-gradient(220deg, #094f2e 0%, #13b569 70%);
 }
 
 .btn-warning:hover {
-	border-color: #a81025;
-	ackground-color: #db3106;
-	background: linear-gradient(220deg, #a81025 0%, #db3106 70%);
+	border-color: #094f2e;
+	ackground-color: #13b569;
+	background: linear-gradient(220deg, #094f2e 0%, #13b569 70%);
 }
 
 .btn-info {
-	border-color: #a81025;
-	ackground-color: #db3106;
-	background: linear-gradient(320deg, #a81025 0%, #db3106 70%);
+	border-color: #094f2e;
+	ackground-color: #13b569;
+	background: linear-gradient(320deg, #094f2e 0%, #13b569 70%);
 }
 
 .btn-info:hover {
-	border-color: #a81025;
-	ackground-color: #db3106;
-	background: linear-gradient(320deg, #a81025 0%, #db3106 70%);
+	border-color: #094f2e;
+	ackground-color: #13b569;
+	background: linear-gradient(320deg, #094f2e 0%, #13b569 70%);
 }
 
 .btn-default {
-	color: #a81025;
+	color: #094f2e;
 	font-weight: bold;
 }
 
