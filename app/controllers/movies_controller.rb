@@ -30,7 +30,7 @@ class MoviesController < ApplicationController
   end
 
   def animated
-    @animated_moves = Movie.animated_movies
+    @animated_movies = Movie.animated_movies
   end
  
   def show
