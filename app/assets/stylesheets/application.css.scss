@@ -18,7 +18,7 @@
 @import "bootstrap";
 
 * {
-    font-family: ArialRoundedMtBold;
+    font-family: 'Orbitron', sans-serif;
  }
 
 .masthead {
@@ -29,14 +29,16 @@
 }
 
 .form_title {
+	font-family: 'Audiowide', cursive;
 	color: white;
+	font-size: 30px;
 }
 
 
 .navbar_title {
-	font-family: 'impact';
+	font-family: 'Audiowide', cursive;
 	color: #6AA233;
-	font-size: 34px;
+	font-size: 30px;
 	text-decorator:none;
 	background: linear-gradient(270deg, #6AA233 0%, #188945 70%);
 	-webkit-background-clip: text;
@@ -48,7 +50,7 @@
 }
 
 .star_title {
-	font-family: 'impact';
+	font-family: 'Audiowide', cursive;
 	color: #6AA233;
 	font-size: 25px;
 	text-decorator:none;
@@ -63,8 +65,13 @@
 }
 
 .index_urls{
-	font-size: 34px;
+	font-family: 'Audiowide', cursive;
 	color: white;
+	font-size: 30px;
+	text-decorator:none;
+	background: linear-gradient(270deg, #6AA233 0%, #188945 70%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 
 }
 
@@ -215,11 +222,11 @@ textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
 
 .navbar_li:hover {
 
-	text-shadow: -1px 1px 1px yellow, 1px -1px 1px yellow;
+	text-shadow: -1px 1px 1px orange, 1px -1px 1px yellow;
 }
 
 .dropdown-menu li:hover {
-	text-shadow: -1px 1px 1px yellow, 1px -1px 1px yellow;
+	text-shadow: -1px 1px 1px orange, 1px -1px 1px yellow;
 }
 
 /** THEME

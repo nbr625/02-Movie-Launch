@@ -43,6 +43,7 @@
           <%= submit_tag "Search", name: nil, class: "btn btn-warning" %>
         </p>
       <% end %>
+ 
       <% if user_signed_in? %>
         <p class="navbar-right" style="padding: 8px;"><%= link_to "Logout", destroy_user_session_path, method: "delete", class: "btn btn-default" %></p>
       <% end %>

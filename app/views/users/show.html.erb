@@ -1,14 +1,45 @@
 <div class="panel panel-default">
   	<div class="panel-body">
-		<ul>
+  		<div class="col-md-6">
 			<h1 class="navbar_title"><%= @user.username%></h2><br/>
 			<li><%= image_tag @user.avatar.url(:medium) %></li><br/><br/>
 			<h2 class="star_title">Biography</h2><br/>
 			<li><%= @user.biography%></li><br/><br/>
 			<h2 class="star_title">Favorite Flick</h2><br/>
 			<li><%= @user.favorite_movie %></li><br/><br/>
+		</div>
+		<div class="col-md-5 col-md-offset-1">
 
-			<li><%= link_to "Change", edit_user_registration_path, class: "btn btn-danger" %></li><br/>
+			<h2 class="star_title">Last Review</h2><br/>
+			<li><strong><%= @user.reviews.last.movie.title%>:</strong></li>
+			<li><%=@user.reviews.last.comment%></li>
+			<br/><br/>
+			<h2 class="star_title">User Rank</h2><br/>
+			<div>
+				<% if @user.reviews.length == 0 %>
+					<%= image_tag("dim_space.jpg", size: "200x200")%>
+					<div class="navbar_element">Empty Space</div>
+				<% elsif @user.reviews.length.between?(1,5) %>
+					<%= image_tag("red_dwarf.jpg", size: "200x200")%>
+					<div class="navbar_element">Red Dwarf</div>
+
+				<% elsif @user.reviews.length.between?(6,10) %>
+					<%= image_tag("small_orange.png", size: "200x200")%>
+					<div class="navbar_element">Orange Dimmer</div>
+				<% elsif @user.reviews.length.between?(11,19) %>
+					<%= image_tag("yellow_star.jpg", size: "200x200")%>
+					<div class="navbar_element">Yellow Sol</div>
+
+				<% elsif @user.reviews.length.between?(20,29 ) %>
+					<%= image_tag("white_star.jpg", size: "200x200")%>
+					<div class="navbar_element">White Giant</div>
+				<% elsif @user.reviews.length < 29 %>
+					<%= image_tag("blue_star.jpg", size: "200x200")%>
+					<div class="navbar_element">Blue Super Giant</div>
+				<% end %>
+			</div><br/>
+
+			<li><%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-danger" %></li><br/>
 		</ul>
 	</div>
 </div> 
