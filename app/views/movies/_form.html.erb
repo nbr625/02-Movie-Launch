@@ -30,10 +30,9 @@
   <%= f.select(:genre, ["Romance", "Action", "Animated"], hide_label: true, include_blank: true) %>
   <div class="navbar_element" style="color: white;">MPAA Rating</div>
   <%= f.select(:grade, ['G', 'PG', 'PG13', 'R'], hide_label: true, include_blank: true)%>
-  <div class="filed">
-    <%= f.text_field :image_url, hide_label: true, placeholder: "Image Url"%>
+  <div>
+    <%= f.file_field :image, hide_label: true, class: "btn btn-default", placeholder: "Select a File"%>
   </div>
-
   <div class="actions">
     <%= f.submit "Post Movie", class: "btn btn-default"  %>
   </div>
