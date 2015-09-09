@@ -44,7 +44,7 @@
 		randomStart: false,
 		captions: false,
 		ticker: true,
-		tickerHover: false,
+		tickerHover: true,
 		adaptiveHeight: false,
 		adaptiveHeightSpeed: 500,
 		video: false,

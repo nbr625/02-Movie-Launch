@@ -44,7 +44,8 @@ gem 'rails_12factor', group: :production
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'rspec-rails'
+  gem 'factory_girl_rails', '~> 4.5.0'
+  gem 'shoulda-matchers'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
@@ -52,6 +53,13 @@ group :development, :test do
   gem 'spring'
 end
 group :test do
-	gem 'capybara'
+  gem 'mocha', '~> 1.1.0'
+  gem 'database_cleaner', '~> 1.4.1'
+  gem 'as-duration', '~> 0.1.0'
+  gem 'rspec-rails', '~> 3.3.3'
+  gem 'faker', '~> 1.5.0'
+  gem 'capybara', '~> 2.5.0'
+  gem 'guard-rspec', '~> 4.6.4'
+  gem 'launchy', '~> 2.4.3'
 end
 
