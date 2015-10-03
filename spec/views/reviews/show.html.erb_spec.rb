@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "prints/show", type: :view do
+RSpec.describe "reviews/show", type: :view do
   before(:each) do
-    @print = assign(:print, Print.create!())
+    @review = assign(:review, Review.create!())
   end
 
   it "renders attributes in <p>" do
