@@ -12,10 +12,10 @@
 <body>
 	<%= render 'layouts/header' %>
 	<div class="container">
-	 	<% flash.each do |name, msg| %>
-			<%= content_tag(:div, msg, class: "alert alert-info") %>
 		<% end %>
 		<%= yield %>
+		<p class="notice" id="notice"><%= notice %></p>
+    	<p class="alert" id="alert"><%= alert %></p> 
 	</div>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 </body>
