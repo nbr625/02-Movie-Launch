@@ -15,11 +15,11 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <% if user_signed_in? %>
-          <li class="navbar_li"><%= link_to "Add a Movie!", new_movie_path, class: "navbar_element", style: "color: #188945;" %></li>
-          <li class="navbar_li"><%= link_to "Profile", current_user, class: "navbar_element", style: "color: #188945;" %></li>
+          <li class="navbar_li"><%= link_to "Add a Movie!", new_movie_path, class: "navbar_element", style: "color: #188945;", id: "new_movie_path"%></li>
+          <li class="navbar_li"><%= link_to "Profile", current_user, class: "navbar_element", style: "color: #188945;", id: "profile_path" %></li>
         <% else %>
-          <li class="navbar_li"><%= link_to "Sign Up!", new_user_registration_path, class: "navbar_element", style: "color: #188945;" %></li>
-          <li class="navbar_li"><%= link_to "Sign in", new_user_session_path, class: "navbar_element", style: "color: #188945;"%></li>
+          <li class="navbar_li"><%= link_to "Sign Up!", new_user_registration_path, class: "navbar_element", style: "color: #188945;", id: "registration_path" %></li>
+          <li class="navbar_li"><%= link_to "Sign in", new_user_session_path, class: "navbar_element", style: "color: #188945;",id: "log_in_path"%></li>
         <% end %>
         <li class="dropdown" style="padding: 10px">
           <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-danger">
@@ -27,11 +27,11 @@
             <span class="caret"></span>
           </button>
           <ul class="dropdown-menu" aria-labelledby="dLabel">
-            <li><%= link_to "New Releases", "/new_releases", style: "color: #188945;"%></li>
-            <li><%= link_to "Action", "/action", style: "color: #188945;"%></li>
-            <li><%= link_to "Romance", "/romance", style: "color: #188945;"%></li>
-            <li><%= link_to "Animated", "/animated", style: "color: #188945;"%></li>
-            <li><%= link_to "Comedy", "/comedy", style: "color: #188945;"%></li>
+            <li><%= link_to "New Releases", "/new_releases", style: "color: #188945;", id: "new_release_path"%></li>
+            <li><%= link_to "Action", "/action", style: "color: #188945;", id: "action_path" %></li>
+            <li><%= link_to "Romance", "/romance", style: "color: #188945;", id: "romance_path" %></li>
+            <li><%= link_to "Animated", "/animated", style: "color: #188945;", id: "animated_path" %></li>
+            <li><%= link_to "Comedy", "/comedy", style: "color: #188945;", id: "comedy_path" %></li>
             
           </ul>
         </li>
@@ -39,13 +39,13 @@
 
       <%= form_tag search_movies_path, method: :get, class: "navbar-form navbar-right", role: "search" do %>
         <p>
-          <%= text_field_tag :search, params[:search], class: "form-control" %>
-          <%= submit_tag "Search", name: nil, class: "btn btn-warning" %>
+          <%= text_field_tag :search, params[:search], class: "form-control", id: "search_text_field" %>
+          <%= submit_tag "Search", name: nil, class: "btn btn-warning", id: "search_submit" %>
         </p>
       <% end %>
  
       <% if user_signed_in? %>
-        <p class="navbar-right" style="padding: 8px;"><%= link_to "Logout", destroy_user_session_path, method: "delete", class: "btn btn-default" %></p>
+        <p class="navbar-right" style="padding: 8px;"><%= link_to "Logout", destroy_user_session_path, method: "delete", class: "btn btn-default", id: "log_out_path" %></p>
       <% end %>
     </div>
   </div>

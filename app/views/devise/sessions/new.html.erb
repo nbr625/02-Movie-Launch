@@ -2,16 +2,16 @@
 
 <%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name), layout: :horizontal, label_col: "col-sm-0", control_col: "col-sm-4") do |f| %>
   <div class="field">
-    <%= f.email_field :email, autofocus: true, hide_label: true, placeholder: "Email" %>
+    <%= f.email_field :email, autofocus: true, hide_label: true, placeholder: "Email", id: 'email' %>
   </div>
 
   <div class="field">
-    <%= f.password_field :password, autocomplete: "off", hide_label: true, placeholder: "Password" %>
+    <%= f.password_field :password, autocomplete: "off", hide_label: true, placeholder: "Password", id: 'password' %>
   </div>
 
   <% if devise_mapping.rememberable? -%>
     <div class="form_title">
-      <%= f.check_box :remember_me %>
+      <%= f.check_box :remember_me, id: 'remember_me' %>
     </div>
   <% end -%>
   <br>
