@@ -4,38 +4,39 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.email_field :email, autofocus: true, hide_label: true, placeholder: "Email" %>
+    <%= f.email_field :email, autofocus: true, hide_label: true, placeholder: "Email", id: 'email' %>
   </div>
 
   <div class="field">
     <% if @minimum_password_length %>
     <em class="form_title">(<%= @minimum_password_length %> characters minimum)</em>
     <% end %>
-    <%= f.password_field :password, autocomplete: "off", hide_label: true, placeholder: "Password" %>
+    <%= f.password_field :password, autocomplete: "off", hide_label: true, placeholder: "Password", id: "password" %>
   </div>
 
   <div class="field">
-    <%= f.password_field :password_confirmation, autocomplete: "off", hide_label: true, placeholder: "Password Confirmation" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", hide_label: true, placeholder: "Password Confirmation", id: 'password_confirmation' %>
   </div>
   
   <div class="field">
-    <%= f.text_field :username, hide_label: true, placeholder: "Username" %>
+    <%= f.text_field :username, hide_label: true, placeholder: "Username", id: "username" %>
   </div>
 
   <div class="field">
-    <%= f.text_area :biography, hide_label: true, placeholder: "Tell Us about yourself" %>
+    <%= f.text_area :biography, hide_label: true, placeholder: "Tell Us about yourself", id: "biography" %>
   </div>
 
   <div class="field">
-    <%= f.text_field :favorite_movie, hide_label: true, placeholder: "What is your favorite movie?" %>
+    <%= f.text_field :favorite_movie, hide_label: true, placeholder: "What is your favorite movie?", id: "favoritemov" %>
   </div>
 
   <div class="field">
-    <%= f.file_field :avatar, hide_label: true, class: "btn btn-default"%>
+    <%= f.file_field :avatar, hide_label: true, class: "btn btn-default", id: "avatar" %>
   </div>
 
   <div class="actions">
     <%= f.submit "Join!" %>
   </div>
+  
 <% end %>
 

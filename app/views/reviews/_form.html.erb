@@ -12,11 +12,11 @@
   <% end %>
 
   <div class="field">
-    <div id="star-rating"></div>
+    <div id="star-rating" ></div>
   </div>
   <br/>
   <div class="field">
-    <%= f.text_area :comment, hide_label: true, placeholder: "Critique" %>
+    <%= f.text_area :comment, hide_label: true, placeholder: "Critique", id: "comment" %>
   </div>
   <div class="actions">
     <%= f.submit %>

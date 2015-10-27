@@ -12,26 +12,26 @@
   <% end %>
 
   <div class="field">
-    <%= f.text_field :title, hide_label: true, placeholder: "Title"%>
+    <%= f.text_field :title, hide_label: true, placeholder: "Title", id: "Title" %>
   </div>
   <div class="filed">
-    <%= f.number_field :year, hide_label: true, placeholder: "Year of release"%>
+    <%= f.number_field :year, hide_label: true, placeholder: "Year of release", id: "year" %>
   </div>
   <div class="field">
-    <%= f.text_area :description, hide_label: true, placeholder: "Description" %>
+    <%= f.text_area :description, hide_label: true, placeholder: "Description", id: "description" %>
   </div>
   <div class="field">
-    <%= f.text_field :movie_length, hide_label: true, placeholder: "Movie Length in Min" %>
+    <%= f.text_field :movie_length, hide_label: true, placeholder: "Movie Length in Min", id: "movie_length" %>
   </div>
   <div class="field">
-    <%= f.text_field :director, hide_label: true, placeholder: "Director" %>
+    <%= f.text_field :director, hide_label: true, placeholder: "Director", id: "director" %>
   </div>
   <div class="navbar_element" style="color: white;">Genre</div>
-  <%= f.select(:genre, ["Romance", "Action", "Animated"], hide_label: true, include_blank: true) %>
+  <%= f.select(:genre, ["Romance", "Action", "Animated"], hide_label: true, include_blank: true), id: "genre" %>
   <div class="navbar_element" style="color: white;">MPAA Rating</div>
-  <%= f.select(:grade, ['G', 'PG', 'PG13', 'R'], hide_label: true, include_blank: true)%>
+  <%= f.select(:grade, ['G', 'PG', 'PG13', 'R'], hide_label: true, include_blank: true), id: "grade" %>
   <div>
-    <%= f.file_field :image, hide_label: true, class: "btn btn-default", placeholder: "Select a File"%>
+    <%= f.file_field :image, hide_label: true, class: "btn btn-default", placeholder: "Select a File", id: "poster_image" %>
   </div>
   <div class="actions">
     <%= f.submit "Post Movie", class: "btn btn-default"  %>
